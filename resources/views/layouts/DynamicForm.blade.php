@@ -200,11 +200,8 @@
     </form>
 </div>
 @push('script')
-
-    <script src="{{asset('js/auth/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
-    <script defer src="{{asset('js/commons.js')}}"></script>
-    <script defer src="{{asset('js/userProcess.js')}}"></script>
-    <script defer src="{{asset('assets/js/cards-actions.js')}}"></script>
+    <script defer src="{{asset('vendor/bpms/js/commons.js')}}"></script>
+    <script defer src="{{asset('vendor/bpms/js/userProcess.js')}}"></script>
     @if($all_form_properties->get("scripts"))
         <script !src="">
             @foreach($all_form_properties->get("scripts") as $script)
@@ -213,163 +210,6 @@
         </script>
     @endif
     <script>
-
-
-        'use strict';
-
-        (function () {
-
-            // ! Documentation Tour only
-            const startBtnDocs = document.querySelector('#task-form-tour');
-
-            function setupTourDocs(tour) {
-                const backBtnClass = 'btn btn-sm btn-label-secondary md-btn-flat',
-                    nextBtnClass = 'btn btn-sm btn-primary btn-next';
-                tour.addStep({
-                    title: 'مدیریت تسک',
-                    text: 'در این بخش شما می توانید اطلاعات درخواست دهنده و تسک های آن را ببینید.',
-
-                    buttons: [
-                        {
-                            action: tour.cancel,
-                            classes: backBtnClass,
-                            text: 'رد کردن'
-                        },
-                        {
-                            text: 'شروع آموزش',
-                            classes: nextBtnClass,
-                            action: tour.next
-                        }
-                    ]
-                });
-                tour.addStep({
-                    title: 'بخش اقلام اطلاعاتی',
-                    text: 'در این بخش شما می توانید خلاصه ای از اطلاعات درخواست دهنده را ببینید در آخر وضعیت درخواست او را مشخص کنید.',
-                    attachTo: {element: '.nav-pill-1', on: 'bottom'},
-                    buttons: [
-                        {
-                            action: tour.cancel,
-                            classes: backBtnClass,
-                            text: 'رد کردن'
-                        },
-                        {
-                            text: 'قبلی',
-                            classes: nextBtnClass,
-                            action: tour.back
-                        },
-                        {
-                            text: 'بعدی',
-                            classes: nextBtnClass,
-                            action: tour.next
-                        }
-                    ]
-                });
-                tour.addStep({
-                    title: 'بخش جداول اطلاعاتی',
-                    text: 'در این بخش شما می توانید اطلاعات شغلی کاربر، ضامنین، اطلاعات حساب بانکی و چک ها را بررسی کنید.',
-                    attachTo: {element: '.nav-pill-2', on: 'bottom'},
-                    buttons: [
-                        {
-                            action: tour.cancel,
-                            classes: backBtnClass,
-                            text: 'رد کردن'
-                        },
-                        {
-                            text: 'قبلی',
-                            classes: nextBtnClass,
-                            action: tour.back
-                        },
-                        {
-                            text: 'بعدی',
-                            classes: nextBtnClass,
-                            action: tour.next
-                        }
-                    ]
-                });
-                tour.addStep({
-                    title: 'بزرگنمایی',
-                    text: 'برای رفتن به حالت تمام صفحه می توانید روی این دکمه کلیک کنید.',
-                    attachTo: {element: '.bx-fullscreen', on: 'bottom'},
-                    buttons: [
-                        {
-                            action: tour.cancel,
-                            classes: backBtnClass,
-                            text: 'رد کردن'
-                        },
-                        {
-                            text: 'قبلی',
-                            classes: nextBtnClass,
-                            action: tour.back
-                        },
-                        {
-                            text: 'بعدی',
-                            classes: nextBtnClass,
-                            action: tour.next
-                        }
-                    ]
-                });
-                tour.addStep({
-                    title: 'فیلدها',
-                    text: 'این بخش به کمک دکمه ای که در سمت چپ آمده است، می تواند باز یا بسته شود.',
-                    attachTo: {element: '#card-header-1', on: 'bottom'},
-                    buttons: [
-                        {
-                            action: tour.cancel,
-                            classes: backBtnClass,
-                            text: 'رد کردن'
-                        },
-                        {
-                            text: 'قبلی',
-                            classes: nextBtnClass,
-                            action: tour.back
-                        },
-                        {
-                            text: 'بعدی',
-                            classes: nextBtnClass,
-                            action: tour.next
-                        }
-                    ]
-                });
-
-                tour.addStep({
-                    title: 'دکمه باز یا بسته شدن باکس',
-                    text: 'با کلیک بر روی این دکمه می توانید باکس مورد نظر را ببندید یا باز کنید.',
-                    attachTo: {element: '#card-action-element-1', on: 'bottom'},
-                    buttons: [
-                        {
-                            action: tour.cancel,
-                            classes: backBtnClass,
-                            text: 'رد کردن'
-                        },
-                        {
-                            text: 'پایان',
-                            classes: nextBtnClass,
-                            action: tour.cancel
-                        },
-
-                    ]
-                });
-
-                return tour;
-            }
-
-            if (startBtnDocs) {
-                // On start tour button click
-                startBtnDocs.onclick = function () {
-                    const tourDocsVar = new Shepherd.Tour({
-                        defaultStepOptions: {
-                            scrollTo: false,
-                            cancelIcon: {
-                                enabled: true
-                            }
-                        },
-                        useModalOverlay: true
-                    });
-
-                    setupTourDocs(tourDocsVar).start();
-                };
-            }
-        })();
         window.onload = function () {
             let thisElms = $('.downlaod-btn');
             for (let i = 0; i < thisElms.length; i++) {
@@ -410,7 +250,5 @@
                 }
             }
         }
-
-
     </script>
 @endpush
