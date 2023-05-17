@@ -1,5 +1,5 @@
 {
-    "name": "user/bpms2",
+    "name": "alimi7372/bpms",
     "description": "The package for send and handle request from/to bpms2",
     "type": "library",
     "autoload": {
