@@ -1,0 +1,32 @@
+{
+    "name": "user/bpms2",
+    "description": "The package for send and handle request from/to bpms2",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Alimi7372\\Bpms2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ali Mohammadi",
+            "email": "Alimohi8118@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "morilog/jalali": "^3.4",
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alimi7372\\BPMS\\BPMSServiceProvider"
+            ]
+        },
+        "aliases": {
+            "bpms": "Alimi7372\\BPMS\\Facades\\BPMSServiceProvider"
+        }
+    }
+}
