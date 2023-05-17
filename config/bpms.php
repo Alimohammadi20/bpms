@@ -2,8 +2,8 @@
 
 return [
     //  base url
-    'platform_base_url' => env('PLATFORM_BASE_URL', 'http://31.7.75.110:8095/hostRest/idea/enc'),
-    'login_base_url' => env('LOGIN_BASE_URL', 'http://31.7.75.110:8095/hostRest/idea/enc'),
+    'platform_base_url' => env('PLATFORM_BASE_URL', 'localhost'),
+    'login_base_url' => env('LOGIN_BASE_URL', 'localhost'),
     'download_file_url' => env('DOWNLOAD_BASE_URL', 'DEFAULT_VALUE'),
 //   sms process
     'register_url' => env('REGISTER_URL', 'DEFAULT_VALUE'),
