@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\BPMS2\Providers;
+namespace Alimi7372\BPMS;
 
 use Illuminate\Support\ServiceProvider;
 

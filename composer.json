@@ -4,7 +4,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Alimi7372\\Bpms2\\": "src/"
+            "Alimi7372\\BPMS\\": "src/"
         }
     },
     "authors": [
